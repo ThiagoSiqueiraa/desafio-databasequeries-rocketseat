@@ -24,7 +24,7 @@ export class GamesRepository implements IGamesRepository {
     return this.repository.query("SELECT COUNT(*) FROM games"); // Complete usando raw query
   }
 
-  async findUsersByGameId(id: string): Promise<any> {
+  async findUsersByGameId(id: string): Promise<User[]> {
     // const gameWithUsers:any = await this.repository
     // .createQueryBuilder("game")
     // .innerJoinAndSelect("game.users", "user").where("game.id = :id", {id}).getOne()
